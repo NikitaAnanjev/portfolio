@@ -864,6 +864,7 @@ section .fp-section .fp-table .active .fp-completely {
 }
 
 .img-hover span {
+    color: #00d8ff;
     position: absolute;
     top: 55%;
     right: 12%;
