@@ -1,0 +1,75 @@
+/*testin*/
+
+.cd-project-mask {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cd-project-mask .featured-image {
+    /* project intro image */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+    height: 100%;
+    width: 100%;
+    background: url(images/joey2.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.cd-project-mask .mask {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+    /*width: 300px;*/
+    /*height: 300px;*/
+}
+
+.cd-project-mask .mask .mask-border {
+    /* this is used to create a frame around the mask */
+    background-color: #a6dad3;
+    position: absolute;
+}
+
+.cd-project-mask .mask .mask-border-top,
+.cd-project-mask .mask .mask-border-bottom {
+    /* this is used to create a frame around the mask */
+    height: calc(50vh - 150px + 10px);
+    width: 100vw;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+}
+
+.cd-project-mask .mask .mask-border-top {
+    bottom: calc(100% - 10px);
+}
+
+.cd-project-mask .mask .mask-border-bottom {
+    top: calc(100% - 10px);
+}
+
+.cd-project-mask .mask .mask-border-left,
+.cd-project-mask .mask .mask-border-right {
+    /* this is used to create a frame around the mask */
+    height: 100vh;
+    width: calc(50vw - 150px + 10px);
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+}
+
+.cd-project-mask .mask .mask-border-left {
+    left: calc(100% - 10px);
+}
+
+.cd-project-mask .mask .mask-border-right {
+    right: calc(100% - 10px);
+}
