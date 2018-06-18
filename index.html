@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>HTML Tutorial</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="styleAdd.css"/>
+    <link type="text/html" rel="fonts" href="https://fonts.google.com/specimen/Varela+Round">
+
+    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/flexboxgrid.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/scrolloverflow.js"></script>
+    <script type="text/javascript" src="js/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="js/scriptLoader.js"></script>
+    <script type="text/javascript" src="js/snap.svg.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/image-effect.js"></script>
+
+    <style>
+
+
+        /* CSS Style Loader by: */
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -40px 0 0 -40px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            animation: spin 1s infinite linear;
+        }
+
+        &
+        :before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            animation: counter-spin .5s infinite linear;
+        }
+
+        &
+        :after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+
+            animation: spin 1s infinite linear;
+        }
+
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes counter-spin {
+            0% {
+                transform: rotate(360deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        /*#section3 .rotationClass h3 {*/
+
+        /*right: 200%;*/
+        /*position: relative;*/
+        /*}*/
+
+        /*#section3 p, #section3 h1, #section3 h5 {*/
+        /*opacity: 0;*/
+        /*}*/
+
+    </style>
+</head>
+
+
+<body>
+
+<!--LOADER SVG STARTS HERE-->
+<div class="loader">
+    <svg class="svg-ani" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="64" height="64" fill="#3289AC">
+        <circle cx="16" cy="3" r="2.88852">
+            <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite" begin="0"
+                     keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(45 16 16)" cx="16" cy="3" r="2.11179">
+            <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite" begin="0.125s"
+                     keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(90 16 16)" cx="16" cy="3" r="0.622049">
+            <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite" begin="0.25s"
+                     keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(135 16 16)" cx="16" cy="3" r="0">
+            <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite" begin="0.375s"
+                     keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(180 16 16)" cx="16" cy="3" r="0">
+            <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite" begin="0.5s"
+                     keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(225 16 16)" cx="16" cy="3" r="0">
+            <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite" begin="0.625s"
+                     keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(270 16 16)" cx="16" cy="3" r="0.560079">
+            <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite" begin="0.75s"
+                     keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(315 16 16)" cx="16" cy="3" r="1.81128">
+            <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite" begin="0.875s"
+                     keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline"/>
+        </circle>
+        <circle transform="rotate(180 16 16)" cx="16" cy="3" r="0">
+            <animate attributeName="r" values="0;3;0;0" dur="1s" repeatCount="indefinite" begin="0.5s"
+                     keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" calcMode="spline"/>
+        </circle>
+    </svg>
+</div>
+<!--LOADER SVG END-->
+<!--MENU STARTS HERE-->
+<div class="menublock" id="myTopnav">
+    <div class="logo" id="logotip">
+        <a href="file:///E:/desca/MyNewPortfolio/Portfolio/index.html#firstPage">
+            <img alt="" src="images/WebkitLogoImage.svg"/>
+        </a>
+    </div>
+    <!--MENU NAV-->
+    <ul id="menu" class="topnav">
+        <li data-menuanchor="firstPage" class=""><a href="#firstPage">Land</a></li>
+        <li data-menuanchor="secondPage" class=""><a href="#secondPage">Me</a></li>
+        <li data-menuanchor="3rdPage" class=""><a href="#3rdPage">Stuff</a></li>
+        <li data-menuanchor="4thPage" class=""><a href="#4thPage">Message</a></li>
+    </ul>
+
+    <!--SOCIAL BUTTONS HERE-->
+    <div class="footer-social-links">
+        <a href="https://www.facebook.com/heldigb" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/nikita-ananjevs" title="LinkedIn+" target="_blank"><i
+                class="fa fa-linkedin"></i></a>
+        <a href="#" title="Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a>
+
+    </div>
+</div>
+
+<!--.MENU END.-->
+
+
+<div id="fullpage"><!-- FULL PAGE WRAPER BEGINS HERE-->
+
+    <!--FIRST SECTION INTRO WITH VIDEO BG-->
+    <div class="section" id="section0">
+        <!-- The video -->
+        <video loop preload="auto" id="myVideo" muted autoplay>
+            <source src="videowebsite.mov" type="video/mp4">
+        </video>
+
+        <div class="row">
+
+            <!-- The video -->
+            <div class="col-lg-offset-2 col-xs-12 col-lg-5">
+                <div class="intro dark-text">
+                    <div class="firstBanner" id="txt1">
+
+                        <h1>Web Development</h1>
+                        <p> Creative front-end web developer looking for full-time job position in Aalborg.
+                            Interested in e-commerce and have more than 4 years of experence with it.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <a href="#secondPage">
+            <div id="nextPageBtn" class="nextPagebtn">
+            </div>
+        </a>
+
+    </div>
+
+    <!-- 2 second SECTION-->
+    <div class="section" id="section1">
+        <div class="row">
+
+            <div class="col-xs-12 col-lg-2">
+                <div class="rotationClass">
+                    <h3>About Me</h3>
+                    <h5>Experience</h5>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-4">
+                <div class="intro dark-text" id="txt2">
+                    <h1>What Do I Do</h1>
+                    <p class="text-height">During my education I became familiar with various programming languages and
+                        features of web industry.
+                        Learned how to work in team according the project management tools.<br/>
+                        I can build a website from scratch, optimize already existing applications or can easily
+                        integrate new features.</p>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-lg-6 hiddenObj">
+                <a href="CV-front-end-udvikler-Nikita-Ananjevs.pdf" class="img-hover" id="img-hover-btn" download>
+                    <img alt="" class="imageRight shadow transition-smoothy" src="images/joey.jpg"/>
+                  <span class="transition-smoothy">Download CV</span>
+                </a>
+
+            </div>
+
+        </div>
+        <a href="#3rdPage">
+            <div id="nextPageBtn2" class="nextPagebtn">
+            </div>
+        </a>
+    </div>
+    <!--Slider section here Section 2-->
+    <div class="section" id="section2">
+        <div class="slide" id="slide1" data-anchor="slide1">
+            <div class="row">
+
+                <div class="col-xs-12 col-lg-6">
+                    <div><span class="bignumber bgn1">1</span></div>
+                    <div class="imageLeft">
+                        <img class="shadow" alt=""
+                             src="images/joey2.jpg"/>
+                        <!--src="https://media.giphy.com/media/3oKIPmCDRFsoucyQ9i/giphy.gif"/>-->
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-4">
+                    <div class="intro dark-text portfolioSlider position-correction" id="txt3">
+                        <h1>This is awesome !</h1>
+                        <p>
+                            Hey! <strong> Try </strong> these buttons on Your keyboard,
+                            This allows you to navigate website without mouse control, simple navigation flow through
+                            whole website...
+                        </p>
+                        <img src="images/arrowkey.png" class="imageContent">
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-lg-2 animated">
+                    <div class="rotationClass">
+                        <h3 id="sld1">How</h3>
+                        <h5 id="sld2">Does it works</h5>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="slide" id="slide2" data-anchor="slide2">
+            <div class="row">
+                <a href="#4thPage">
+                    <div id="nextPageBtn4" class="nextSlidebtn shadow">
+                    </div>
+                </a>
+                <div class="col-xs-12 col-lg-2">
+                    <div class="rotationClass">
+                        <h3 id="sld3">Designing Ui</h3>
+                        <h5 id="sld4">Motion graphic</h5>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-4 hiddenObj">
+                    <div><span class="bignumber bgn2">2</span></div>
+                    <div class="intro dark-text" id="txt4a">
+                        <h1>Reval Cafe - Catering (Tallin, Estonia)</h1>
+                        <p>
+                            Clear and smooth landing page for a catering services in Tallin. Reval Cafe is one of the
+                            largest and well known as cafe industry chain.
+                        </p>
+                        <ul class="project-atr">
+                            <li>AfterEffects</li>
+                            <li>Photoshop</li>
+                            <li>Easying Motion</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-6">
+
+                    <iframe class="shadow" width="100%" height="550" src="https://www.youtube.com/embed/qzklMY5u6nM"
+                            frameborder="0" encrypted-media="allowfullscreen"></iframe>
+                </div>
+                <div class="col-xs-offset-2  col-xs-10 col-lg-4 hideObj showObj">
+                    <div><span class="bignumber bgn2">2</span></div>
+                    <div class="intro dark-text" id="txt4">
+                        <h1>Reval Cafe - Catering (Tallin, Estonia)</h1>
+                        <p>
+                            Clear and smooth landing page for a catering services in Tallin. Reval Cafe is one of the
+                            largest and well known as cafe industry chain.
+                        </p>
+                        <ul class="project-atr">
+                            <li>AfterEffects</li>
+                            <li>Photoshop</li>
+                            <li>Easying Motion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide" id="slide3" data-anchor="slide3">
+                <div class="row">
+
+                    <div class="col-xs-12 col-lg-2 hiddenObj">
+                        <div class="rotationClass">
+                            <h3 id="sld5">Layout </h3>
+                            <h5 id="sld6">Ui animation</h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-6 imageLeft">
+
+                        <iframe width="100%" height="530" src="https://www.youtube.com/embed/aqTWl0xdaLw?rel=0"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-xs-12 col-lg-4">
+
+                        <div class="intro dark-text portfolioSlider" id="txt5">
+                            <h1>Business website</h1>
+                            <p>
+                                It is not enough to receive best and most relevant information. It is also important to
+                                have a good feeling of the website while you looking for the specific information.
+                                This is a great example of how website can perform to make users attracted and leave
+                                unforgettable feelings.
+                            </p>
+                            <ul class="project-atr">
+                                <li>AfterEffects</li>
+                                <li>Photoshop</li>
+                                <li>Easying Motion</li>
+                            </ul>
+                        </div>
+                        <div><span class="bignumber bgn3">3</span></div>
+                    </div>
+                    <div class="col-xs-offset-2  col-xs-10 col-lg-4 hideObj showObj">
+
+                        <div class="intro dark-text portfolioSlider" id="txt5a">
+                            <h1>Business website</h1>
+                            <p>
+                                It is not enough to receive best and most relevant information. It is also important to
+                                have a good feeling of the website while you looking for the specific information.
+                                This is a great example of how website can perform to make users attracted and leave
+                                unforgettable feelings.
+                            </p>
+                            <ul class="project-atr">
+                                <li>AfterEffects</li>
+                                <li>Photoshop</li>
+                                <li>Easying Motion</li>
+                            </ul>
+                        </div>
+                        <div><span class="bignumber bgn3">3</span></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="slide" id="slide4" data-anchor="slide4">
+                <div class="row">
+
+
+                    <div class="col-xs-12 col-lg-2">
+                        <div class="rotationClass">
+                            <h3 id="sld7">Ui Design</h3>
+                            <h5 id="sld8">Webside design</h5>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-4 hiddenObj">
+                        <div><span class="bignumber bgn4">4</span></div>
+                        <div class="intro dark-text" id="txt6a">
+
+                            <h1>Little concert - book your artist</h1>
+                            <p>
+                                Ambitious project fo Marathon Media Group, based in Aalborg but works worldwide. Their
+                                main goal is to provide digital platform for both sides of musician world. For those who
+                                would like to play music and those who wish to listen to it.
+                            </p>
+                            <ul class="project-atr">
+                                <li>Photoshop</li>
+                                <li>Creative Ui Design</li>
+                                <li>Drop of Inspiration</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-6">
+                        <img class="shadow imageFullresponsive" alt=""
+                             src="images/little%20concert/Little-concert-1.jpg"/>
+                    </div>
+                    <div class="col-xs-offset-2  col-xs-10 col-lg-4 hideObj showObj">
+                        <div><span class="bignumber bgn4">4</span></div>
+                        <div class="intro dark-text" id="txt6">
+
+                            <h1>Little concert - book your artist</h1>
+                            <p>
+                                Ambitious project fo Marathon Media Group, based in Aalborg but works worldwide. Their
+                                main goal is to provide digital platform for both sides of musician world. For those who
+                                would like to play music and those who wish to listen to it.
+                            </p>
+                            <ul class="project-atr">
+                                <li>Photoshop</li>
+                                <li>Creative Ui Design</li>
+                                <li>Drop of Inspiration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" id="slide5" data-anchor="slide5">
+                <div class="row">
+
+                    <div class="col-xs-12 col-lg-2">
+                        <div class="rotationClass">
+                            <h3 id="sld9">Accident</h3>
+                            <h5 id="sld10">On a boat</h5>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-lg-6 imageLeft">
+
+                        <iframe class="video-slider" width="100%" height="530"
+                                src="https://www.youtube.com/embed/Oe9RqzdTBQM?rel=0&amp;controls=0&amp;showinfo=0"
+                                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <!--<img class="shadow" alt="Next Page" src="images/weblogokit.svg"/>-->
+                    </div>
+                    <div class=" col-xs-10 col-lg-4 hiddenObj">
+                        <div><span class="bignumber bgn5">5</span></div>
+                        <div class="intro dark-text portfolioSlider" id="txt7">
+                            <h1>Character animation</h1>
+                            <p>
+                                Great experience comes with a big number of tries. This is it, Accident on a boat was a
+                                field for my animation skills development. Where i could create scenes, character, story
+                                by myself. Probably the end of animation will look a little bit harsh, but remember it's
+                                just a cartoon.
+                            </p>
+                            <ul class="project-atr">
+                                <li>Photoshop</li>
+                                <li>DUIK & AfterEffects</li>
+                                <li>Illustrator</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-offset-2 col-xs-10 col-lg-4 hideObj showObj">
+                        <div><span class="bignumber bgn5">5</span></div>
+                        <div class="intro dark-text portfolioSlider" id="txt7a">
+                            <h1>Character animation</h1>
+                            <p>
+                                Great experience comes with a big number of tries. This is it, Accident on a boat was a
+                                field for my animation skills development. Where i could create scenes, character, story
+                                by myself. Probably the end of animation will look a little bit harsh, but remember it's
+                                just a cartoon.
+                            </p>
+                            <ul class="project-atr">
+                                <li>Photoshop</li>
+                                <li>DUIK & AfterEffects</li>
+                                <li>Illustrator</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section" id="section3">
+        <div class="row  start-lg">
+            <a href="#5thPage">
+                <div id="nextPageBtn9" class="nextPagebtn">
+                </div>
+            </a>
+            <div class="col-xs-12 col-lg-2">
+                <div class="rotationClass">
+                    <h3>Drop a message</h3>
+                    <h5>Contact Information</h5>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-4 hiddenObj">
+                <div class="intro dark-text" id="wow">
+                    <h1>How You can reach Me</h1>
+                    <p>Exhale and take it easy </br> try to send me email or simply give me a call</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-lg-3">
+                <ul>
+                    <li><p>Aalborg</p></li>
+                    <li><p>web.nikan@gmail.com</p></li>
+                    <li><p>+45 52 79 4567</p></li>
+                    <li><p>Nikita Ananjevs</p></li>
+                </ul>
+
+
+                <form style="display: none" name="contactform" method="post" action="sendMail.php">
+                    <table>
+                        <tr>
+                            <td valign="top">
+                                <label for="first_name">First Name *</label>
+                            </td>
+                            <td valign="top">
+                                <input type="text" name="first_name" maxlength="50" size="30">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <label for="last_name">Last Name *</label>
+                            </td>
+                            <td valign="top">
+                                <input type="text" name="last_name" maxlength="50" size="30">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <label for="email">Email Address *</label>
+                            </td>
+                            <td valign="top">
+                                <input type="text" name="email" maxlength="80" size="30">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <label for="telephone">Telephone Number</label>
+                            </td>
+                            <td valign="top">
+                                <input type="text" name="telephone" maxlength="30" size="30">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <label for="comments">Comments *</label>
+                            </td>
+                            <td valign="top">
+                                <textarea name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align:center">
+                                <input type="submit" value="Submit">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="section" id="section4">
+        <div class="row">
+            <a href="#firstPage">
+                <div id="nextPageBtn7" class="nextPagebtn btn-up">
+                </div>
+            </a>
+            <div class="col-xs-12">
+                <h1>Thank You</h1>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</body>
+</html>
